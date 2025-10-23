@@ -28,7 +28,7 @@ library(sf)
 # (e.g. "turtledata", "trackingdata", etc.). From here-on, whenever there is a blank that looks like so: __DATA_NAME__
 # replace it with the name you assigned.
 
-turtledata <- read_csv("turtledata.csv")
+turtledata <- read.csv("turtledata.csv")
 view(turtledata)
 
 ## STEP 3 - FILTER DATA BY TURTLE ID AND VIEW 
@@ -40,7 +40,7 @@ view(turtledata)
 #                 3) ____TURTLE_ID_NAME____: Chose the turtle you'd like to track and put it's name in the quotes
 
 turtledata_filtered <- turtledata %>%
-  filter(`turtle ID` == "squirt")
+  filter(turtle.ID == "squirt")
 
 ## STEP 4 - IMPORT MAP DATA
 # R needs spatial data to make a map of the area we are interested in. The function below allows R to access that data
